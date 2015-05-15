@@ -1,7 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #fff font-size: 12px;
+    background-color: #fff;
+    font-size: 12px;
     font-family: "source-sans-pro", sans-serif;
     -webkit-font-smoothing: subpixel-antialiased;
 }
@@ -33,7 +34,7 @@ h3 {
     font-family: 'merriweather', sans-serif;
 }
 h2, h3 {
-    margin-top: 5px
+    margin-top: 5px;
 }
 
 h3.skills-left {
@@ -177,6 +178,13 @@ ul {
     list-style: none;
 }
 
+textarea {
+    font-size: 1em;
+}
+
+input {
+    font-size: 1.2em;
+}
 
 @page { size: A4;
     margin: 0;

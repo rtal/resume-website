@@ -11,6 +11,7 @@
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script>
+// http://jsfiddle.net/nMcxQ/
 $(function() {
     function moveFloatMenu() {
         var menuOffset = menuYloc.top + $(this).scrollTop() + "px";
@@ -29,6 +30,18 @@ $(function() {
     moveFloatMenu();
 });
 </script>
+<script>
+$(function() {
+    $('#contact-form').on('submit', function(e) {
+        e.preventDefault();
+        var data = $('#contact-form :input').serializeArray();
+        var name = data[0].value;
+        var email = data[1].value;
+        var message = data[2].value;
+        
+    });
+});
+</script>
 <head>
     <meta charset="UTF-8">
     <title>Rohit Talreja</title>
@@ -45,6 +58,7 @@ $(function() {
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#interests">Interests</a></li>
+            <li><a href="#contact">Contact Me!</a></li>
         </ul>
     </div>
 </nav>
@@ -435,6 +449,23 @@ $(function() {
             <h3>Making/Hacking/Tinkering</h3>
             <h3>Movies</h3>
             <h3>New technologies</h3>
+        </div>
+    </div>
+    <!-- Contact Form -->
+    <div class="section row">
+        <a id="contact"></a>
+        <h2 class="col">Contact</h2>
+        <div class="section-text col-right">
+            <form method="POST" id="contact-form">
+                <h3>Name:</h3>
+                <textarea rows="1" cols="50" name="contact-name"></textarea>
+                <h3>Email:</h3>
+                <textarea rows="1" cols="50" name="contact-email"></textarea>
+                <h3>Message:</h3>
+                <textarea rows="10" cols="50" name="contact-message"></textarea>
+                <br>
+                <input type="submit" value="Submit" font>
+            </form>
         </div>
     </div>
 </div>
