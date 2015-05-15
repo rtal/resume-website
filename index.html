@@ -38,6 +38,11 @@ $(function() {
         var name = data[0].value;
         var email = data[1].value;
         var message = data[2].value;
+        var spam = data[3].value;
+
+        var isSpam = (spam === "");
+        console.log(isSpam);
+
         
     });
 });
@@ -464,7 +469,8 @@ $(function() {
                 <h3>Message:</h3>
                 <textarea rows="10" cols="50" name="contact-message"></textarea>
                 <br>
-                <input type="submit" value="Submit" font>
+                <input type="text" name="spam-filter" style="display: none;">
+                <input type="submit" value="Submit">
             </form>
         </div>
     </div>
