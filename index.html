@@ -8,7 +8,26 @@
 
   ga('create', 'UA-60440804-1', 'auto');
   ga('send', 'pageview');
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
+$(function() {
+    function moveFloatMenu() {
+        var menuOffset = menuYloc.top + $(this).scrollTop() + "px";
+        $('#menu').animate({
+            top: menuOffset
+        }, {
+            duration: 500,
+            queue: false
+        });
+    }
 
+    menuYloc = $('#menu').offset();
+
+    $(window).scroll(moveFloatMenu);
+
+    moveFloatMenu();
+});
 </script>
 <head>
     <meta charset="UTF-8">
@@ -16,9 +35,23 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
 </head>
+<nav>
+    <div id="menu">
+        <ul>
+            <li><a href="#top">Top of page</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#work">Work Experience</a></li>
+            <li><a href="#leadership">Leadership Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#interests">Interests</a></li>
+        </ul>
+    </div>
+</nav>
 <body>
 <div class="page">
     <div class="row">
+        <a id="top"></a>
         <h1>ROHIT TALREJA</h1>
         <div class="contact-info">
             <div id="email"><a href="mailto:rtalreja@cs.stanford.edu">[Email]</a></div>
@@ -28,6 +61,7 @@
     </div>
     <!--Education-->
     <div class="section row">
+        <a id="education"></a>
         <h2 class="col">Education</h2>
         <div class="section-text col-right">
             <h3>MS, Computer Science</h3>
@@ -51,6 +85,7 @@
         </div>
     </div>
     <!--Work experience-->
+    <a id="work"></a>
     <div class="section row">
         <h2 class="col">Work Experience</h2>
         <!--Microsoft-->
@@ -168,6 +203,7 @@
     </div>
     <!--Leadership-->
     <div class="section row">
+        <a id="leadership"></a>
         <h2 class="col">Leadership Experience</h2>
         <!--BIOE 51 TA-->
         <div class="section-text col-right">
@@ -263,6 +299,7 @@
     </div>
     <!--Projects-->
     <div class="section row">
+        <a id="projects"></a>
         <h2 class="col">Selected Projects and Research</h2>
         <!--CS 221-->
         <div class="section-text col-right">
@@ -342,6 +379,7 @@
         </div>
     </div>
     <div class="section row">
+        <a id="skills"></a>
         <h2 class="col">Skills Summary</h2>
         <div class="section-text col-right">
             <ul>
@@ -390,6 +428,7 @@
     </div>
     <!--Interests-->
     <div class="section row">
+        <a id="interests"></a>
         <h2 class="col">Interests</h2>
         <div class="section-text col-right">
             <h3>Photography</h3>
