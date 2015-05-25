@@ -30,23 +30,6 @@ $(function() {
     moveFloatMenu();
 });
 </script>
-<script>
-$(function() {
-    $('#contact-form').on('submit', function(e) {
-        e.preventDefault();
-        var data = $('#contact-form :input').serializeArray();
-        var name = data[0].value;
-        var email = data[1].value;
-        var message = data[2].value;
-        var spam = data[3].value;
-
-        var isSpam = (spam === "");
-        console.log(isSpam);
-
-        
-    });
-});
-</script>
 <head>
     <meta charset="UTF-8">
     <title>Rohit Talreja</title>
@@ -461,13 +444,13 @@ $(function() {
         <a id="contact"></a>
         <h2 class="col">Contact</h2>
         <div class="section-text col-right">
-            <form method="POST" id="contact-form">
+            <form action="mailto:rtalreja@cs.stanford.edu" method="POST" id="contact-form" enctype="text/plain">
                 <h3>Name:</h3>
-                <textarea rows="1" cols="50" name="contact-name"></textarea>
+                <textarea rows="1" cols="60" name="contact-name"></textarea>
                 <h3>Email:</h3>
-                <textarea rows="1" cols="50" name="contact-email"></textarea>
+                <textarea rows="1" cols="60" name="contact-email"></textarea>
                 <h3>Message:</h3>
-                <textarea rows="10" cols="50" name="contact-message"></textarea>
+                <textarea rows="10" cols="60" name="contact-message"></textarea>
                 <br>
                 <input type="text" name="spam-filter" style="display: none;">
                 <input type="submit" value="Submit">
